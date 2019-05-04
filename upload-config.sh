@@ -1,1 +1,1 @@
-echo $JOB_NAME,$NEW_VAR | gsutil cp - gs://metal-tile-ai-mlengine/output/${JOB_NAME}.csv
+echo $JOB_NAME,$NEW_VAR,`date '+%Y-%m-%dT%H:%M:%S.00Z'` | gsutil cp - gs://metal-tile-ai-mlengine/output/${JOB_NAME}.csv
