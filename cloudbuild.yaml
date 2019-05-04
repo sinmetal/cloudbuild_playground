@@ -10,8 +10,6 @@ steps:
           ./start.sh
 - name: 'ubuntu'
   args: ['echo', 'hello ${_SUB_VALUE}']
-- name: 'ubuntu'
-  args: ['echo', 'hello ${_SUB_VALUE}', '>', 'output.txt']
 - name: 'gcr.io/cloud-builders/gsutil'
   entrypoint: bash
   env:
