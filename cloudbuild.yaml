@@ -15,6 +15,11 @@ steps:
   env:
   - 'JOB_NAME=sample-$BUILD_ID'
   - 'NEW_VAR=$_NEW_VAR'
+  - 'REPO_NAME=$REPO_NAME'
+  - 'BRANCH_NAME=$BRANCH_NAME'
+  - 'TAG_NAME=$TAG_NAME'
+  - 'REVISION_ID=$REVISION_ID'
+  - 'COMIT_SHA=$COMMIT_SHA'
   args:
     - -c
     - |
