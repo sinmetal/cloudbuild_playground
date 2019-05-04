@@ -10,6 +10,17 @@ steps:
           ./start.sh
 - name: 'ubuntu'
   args: ['echo', 'hello ${_SUB_VALUE}']
+- name: 'ubuntu'
+  args: ['echo', 'hello ${_SUB_VALUE}', '>', 'output.txt']
+- name: 'gcr.io/cloud-builders/gsutil'
+  entrypoint: bash
+  env:
+  - 'JOB_NAME=$_JOB_NAME'
+  - 'NEW_VAR=sample-$BUILD_ID'
+  args:
+    - -c
+    - |
+          ./upload-config.sh
 substitutions:
     _SUB_VALUE: world
     _JOB_NAME: jobbbbbbbb
