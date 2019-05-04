@@ -3,6 +3,7 @@ steps:
   entrypoint: bash
   env:
   - 'JOB_NAME=$_JOB_NAME'
+  - 'NEW_VAR=sample-$BUILD_ID'
   args:
     - -c
     - |
