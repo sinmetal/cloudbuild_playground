@@ -5,3 +5,7 @@ steps:
     - -c
     - |
           ./start.sh
+- name: 'ubuntu'
+  args: ['echo', 'hello ${_SUB_VALUE}']
+substitutions:
+    _SUB_VALUE: world
